@@ -1,0 +1,8 @@
+graph_api_endpoint: 'https://graph.microsoft.com/v1.0'
+remote_folder_path: '' # No '/' at the end or beginning of the path. Must include proper path from root (excluded)
+chunk_size: 327680 # do not edit this
+req_multiple: 300 # approx: 91 MB, calculated by: chunk_size * req_multiple
+
+ms_app:
+  client_id: '{Your App Client ID}'
+  client_secret: '{App CLient Secret}'
