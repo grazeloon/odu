@@ -71,7 +71,7 @@ for path in Items:
         # Movie
         itm = {
             'type': 'movie',
-            'folderName': os.path.splitext(str(os.path.basename(files[0])))[0],
+            'folderName': os.path.splitext(str(os.path.basename(path)))[0],
             'rfp': movie_path,
             'files': [
                 path
