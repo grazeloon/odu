@@ -51,6 +51,7 @@ with open('config.yml', 'r') as creds:
     tv_path = app_creds['tv_path']
     movie_path = app_creds['movie_path']
     chunk_size = app_creds['upload_chunks']
+    bulk_upload_dir = app_creds['local_bulk']
 
 main_list = []
 Items = []
@@ -59,6 +60,10 @@ print("Provide the files below, enter 0 to exit.")
 while True:
     entity = str(input("Enter the path of the file/folder you want to upload: "))
     if entity == 0 or entity == '0':
+        break
+    elif entity == 5 or entity == '5':
+        for file in glob.glob(f'{bulk_upload_dir}/*.*'):
+            Items.append(file)
         break
     else:
         Items.append(entity)
